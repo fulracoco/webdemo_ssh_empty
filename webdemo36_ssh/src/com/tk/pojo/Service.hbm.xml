@@ -1,0 +1,16 @@
+<?xml version="1.0"?>  
+    <!DOCTYPE hibernate-mapping PUBLIC   
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+    <hibernate-mapping>  
+        	<!--生成默认为user的数据库表-->  
+        <class name="com.tk.pojo.Service" table="t_service">  
+           	<id name="s_id" type="int">  
+           	 <generator class="native"></generator>  
+        	</id>
+       		<property name="service_code" type="string"></property>
+         	<property name="service_name" type="string"></property>
+         	<many-to-one name="user" column="u_id" class="com.tk.pojo.User">
+         	</many-to-one>  
+      	</class>
+    </hibernate-mapping>

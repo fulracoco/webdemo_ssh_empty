@@ -1,0 +1,19 @@
+<?xml version="1.0"?>  
+    <!DOCTYPE hibernate-mapping PUBLIC   
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+    <hibernate-mapping>  
+        <!--生成默认为user的数据库表-->  
+        <class name="com.tk.pojo.User" table="t_user">  
+           <id name="u_id" type="int">  
+            <generator class="native"></generator>  
+        	</id>
+          <property name="u_name" type="string"></property>  
+      	<set name="services"  lazy="false" fetch="join" cascade="all">
+      		<key column="u_id"/>
+      		<one-to-many class="com.tk.pojo.Service"/>
+      	</set>
+      
+        </class>  
+          
+    </hibernate-mapping>

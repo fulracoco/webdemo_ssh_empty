@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+ 	<package name="/demo" namespace="/demo" extends="struts-default">
+		<!-- <action name="costslist" 
+			class="action.CostAction" method="listCosts"> 
+		http://localost:8080/webdemo8/
+			        demo/costslist.action
+		<result name="ok">/costlist.jsp</result>
+		<result name="failed">/index.jsp</result>
+		</action>  -->
+		<action name="helloss" class="helloAction">
+			<result name="success">/WEB-INF/jsp/hello.jsp</result>
+			<result name="failed">/index.jsp</result>
+		</action>
+	</package>
+</struts>
