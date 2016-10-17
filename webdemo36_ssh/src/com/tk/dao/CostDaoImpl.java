@@ -84,7 +84,6 @@ public class CostDaoImpl extends HibernateDaoSupport
 		if(rows%pageSize == 0){
 			return rows/pageSize ;
 		}else {
-			
 			return rows/pageSize + 1;
 		}
 	}

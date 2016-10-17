@@ -1,10 +1,13 @@
 package com.tk.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
+
+import net.sf.ehcache.search.impl.SearchManager;
 
 import org.springframework.stereotype.Component;
 @Component
-public class Cost {
+public class Cost implements Serializable {
 	private Integer cost_id;
 	private String name;
 	private Long base_duration;

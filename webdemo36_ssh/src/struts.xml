@@ -16,4 +16,5 @@
 			<result name="failed">/index.jsp</result>
 		</action>
 	</package>
+	<include file="struts_cost.xml"></include>
 </struts>
